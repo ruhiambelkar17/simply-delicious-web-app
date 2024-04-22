@@ -65,14 +65,14 @@
       <button @click="logout">Logout</button>
       <p>The user currently logged in is: {{ user.name }}</p>
     </div> -->
-    <div class="d-none" v-if="isSignInClicked">
+    <div class="" v-if="isSignInClicked">
       <GoogleLogin :callback="callback" prompt auto-login></GoogleLogin>
     </div>
   </div>
 </template>
 
 <script>
-import {googleLogout,decodeCredential} from "vue3-google-login";
+import {decodeCredential, googleLogout} from "vue3-google-login"
 export default {
     data(){
     return {
@@ -88,6 +88,7 @@ export default {
     signInBy() {
       console.log("Clicked on sign in arrow");
       this.isSignInClicked=true;
+      
     },
   },
 };
