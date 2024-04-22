@@ -71,10 +71,15 @@
 </template>
 
 <script>
+import {googleLogout,decodeCredential} from "vue3-google-login";
 export default {
     data(){
     return {
-        isSignInClicked:false
+        isSignInClicked:false,
+        user:null,
+        callback:(response) =>{
+            this.user=decodeCredential(response.user)
+        }
     }
   },
   methods: {
