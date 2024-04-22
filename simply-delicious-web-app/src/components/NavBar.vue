@@ -59,14 +59,28 @@
         </div>
       </div>
     </nav>
+
+    <!-- <div v-if="loggedIn">
+      <button @click="logout">Logout</button>
+      <p>The user currently logged in is: {{ user.name }}</p>
+    </div> -->
+    <div class="d-none" v-if="isSignInClicked">
+      <GoogleLogin :callback="callback" prompt auto-login></GoogleLogin>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+    data(){
+    return {
+        isSignInClicked:false
+    }
+  },
   methods: {
     signInBy() {
       console.log("Clicked on sign in arrow");
+      this.isSignInClicked=true;
     },
   },
 };
