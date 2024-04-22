@@ -43,6 +43,7 @@
             />
           </svg>
           <span class="ps-2" @click="signInBy">
+            <span>{{ user }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -77,8 +78,9 @@ export default {
     return {
         isSignInClicked:false,
         user:null,
-        callback:(response) =>{
-            this.user=decodeCredential(response.user)
+        callback:(response) => {
+            this.user=decodeCredential(response.credential);
+            console.log(this.user)
         }
     }
   },
