@@ -27,7 +27,8 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="d-inline-flex">
+          <span class="pe-3">{{ user?.name }}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
@@ -42,21 +43,37 @@
               d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
             />
           </svg>
-          <span class="ps-2" @click="signInBy">
-            <span>{{ user.name }}</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="grey"
-              class="bi bi-caret-down-fill"
-              viewBox="0 0 16 16"
+          <div   class="dropdown">
+            <span
+              class="ps-2 dropdown-toggle"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              
             >
-              <path
-                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
-              />
-            </svg>
-          </span>
+              
+              <ul  class="dropdown-menu dropdown-menu-light">
+                <li><a class="dropdown-item " href="#" @click="signInBy"> Sign In with Google Account</a>
+                    <div  v-if="isSignInClicked">
+      <GoogleLogin :callback="callback" prompt auto-login></GoogleLogin>
+    </div></li>
+                <li><a class="dropdown-item " href="#"> Switch Account</a></li>
+                <li><a class="dropdown-item" @click="logOut" href="#">Sign Out</a></li>
+                
+              </ul>
+            </span>
+          </div> 
+          <!-- <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <ul class="dropdown-menu dropdown-menu-dark">
+    <li><a class="dropdown-item active" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div> -->
         </div>
       </div>
     </nav>
@@ -65,32 +82,35 @@
       <button @click="logout">Logout</button>
       <p>The user currently logged in is: {{ user.name }}</p>
     </div> -->
-    <div class="d-none" v-if="isSignInClicked">
-      <GoogleLogin :callback="callback" prompt auto-login></GoogleLogin>
-    </div>
+    
   </div>
 </template>
 
 <script>
-import {decodeCredential, googleLogout} from "vue3-google-login"
+import { decodeCredential, googleLogout } from "vue3-google-login";
 export default {
-    data(){
+  data() {
     return {
-        isSignInClicked:false,
-        user:null,
-        callback:(response) => {
-                console.log("Logged in");
-                this.loggedIn=true;
-                this.user=decodeCredential(response.credential);
-            },
-    }
+      isSignInClicked: false,
+      user: null,
+      callback: (response) => {
+        console.log("Logged in");
+        this.loggedIn = true;
+        this.user = decodeCredential(response.credential);
+      },
+    };
   },
   methods: {
     signInBy() {
-      console.log("Clicked on sign in arrow");
-      this.isSignInClicked=true;
-      
+      console.log("Clicked on sign in arrow", this.user);
+      this.isSignInClicked = true;
     },
+    logOut(){
+        googleLogout();
+        console.log("Logged out")
+        this.isSignInClicked = false;
+        this.user=null;
+    }
   },
 };
 </script>
