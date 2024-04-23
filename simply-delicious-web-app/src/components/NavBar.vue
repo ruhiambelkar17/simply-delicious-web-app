@@ -43,7 +43,7 @@
             />
           </svg>
           <span class="ps-2" @click="signInBy">
-            <span>{{ user }}</span>
+            <span>{{ user.name }}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -65,7 +65,7 @@
       <button @click="logout">Logout</button>
       <p>The user currently logged in is: {{ user.name }}</p>
     </div> -->
-    <div class="" v-if="isSignInClicked">
+    <div class="d-none" v-if="isSignInClicked">
       <GoogleLogin :callback="callback" prompt auto-login></GoogleLogin>
     </div>
   </div>
@@ -79,9 +79,10 @@ export default {
         isSignInClicked:false,
         user:null,
         callback:(response) => {
-            this.user=decodeCredential(response.credential);
-            console.log(this.user)
-        }
+                console.log("Logged in");
+                this.loggedIn=true;
+                this.user=decodeCredential(response.credential);
+            },
     }
   },
   methods: {
