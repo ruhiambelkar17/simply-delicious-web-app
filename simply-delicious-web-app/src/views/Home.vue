@@ -1,9 +1,11 @@
 <script>
 import NavBar from "../components/NavBar.vue";
+import Carousel from "../components/Carousel.vue";
 
 export default {
   components: {
     NavBar,
+    Carousel
   },
   data(){
     return {
@@ -16,7 +18,7 @@ export default {
 <template>
   <div>
     <NavBar />
-   
+   <Carousel />
 
   </div>
 </template>
