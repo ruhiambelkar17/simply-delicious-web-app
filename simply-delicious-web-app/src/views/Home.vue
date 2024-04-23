@@ -18,7 +18,9 @@ export default {
 <template>
   <div>
     <NavBar />
-   <Carousel />
+   <Carousel>
+    
+   </Carousel>
 
   </div>
 </template>

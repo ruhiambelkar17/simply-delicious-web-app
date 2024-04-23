@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
       <div class="container">
         <a class="navbar-brand" href="#">Simply Delicious</a>
         <button
