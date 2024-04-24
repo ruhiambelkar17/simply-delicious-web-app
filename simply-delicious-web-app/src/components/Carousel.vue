@@ -10,16 +10,25 @@
     <div class="carousel-item active">
       <img src="../assets/images/Smoothie.jpeg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-25 rounded">
-        <h5>First slide label</h5>
+        <h5>Welcome to Simply Delicious!!</h5>
         <p>Some representative placeholder content for the first slide.</p>
       </div>
 
     </div>
     <div class="carousel-item">
       <img src="../assets/images/Smoothie.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-25 rounded">
+        <h5>Recipes</h5>
+        <p>Strawberry Smoothie</p>
+      </div>
+
     </div>
     <div class="carousel-item">
       <img src="../assets/images/Smoothie.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-25 rounded">
+        <h5>Recipes</h5>
+        <p>Veg Cutlets</p>
+      </div>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
