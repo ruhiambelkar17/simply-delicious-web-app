@@ -18,9 +18,11 @@ export default {
 <template>
   <div>
     <NavBar />
-   <Carousel>
-    
-   </Carousel>
-
+   <Carousel></Carousel>
+    <div class="my-3 d-flex justify-content-center">
+        <h3 class="text-center ">Recipes</h3>
+        <br />
+        <hr style=" width: 200px;" class="" /> 
+    </div>
   </div>
 </template>
