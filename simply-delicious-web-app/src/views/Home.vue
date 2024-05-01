@@ -27,8 +27,19 @@ export default {
         <div> 
             <img src="../assets/images/Smoothie.jpeg" class="img-fluid recipe-img rounded shadow"  >
         </div>
-        <div class="row"> 
-            <div class="col-md-12"> </div>
+        <div class="row mt-4"> 
+            <div class="col-md-4"> 
+                <img src="../assets/images/Smoothie.jpeg" class="img-fluid recipe-sub-img rounded shadow"  >
+        
+            </div>
+            <div class="col-md-4"> 
+                <img src="../assets/images/Smoothie.jpeg" class="img-fluid recipe-sub-img rounded shadow"  >
+        
+            </div>
+            <div class="col-md-4 "> 
+                <img src="../assets/images/Smoothie.jpeg" class="img-fluid recipe-sub-img rounded shadow"  >
+        
+            </div>
         </div>
        
     </div>
@@ -40,4 +51,10 @@ export default {
     width: 100%;
     height: 300px;
 }
+
+.recipe-sub-img {
+    width: 100%;
+    height: 300px;
+}
+
 </style>
