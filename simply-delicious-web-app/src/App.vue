@@ -1,10 +1,10 @@
 <script >
-import Home from './views/Home.vue'
+//import Home from './views/Home.vue'
 
 export default {
   components:{
    
-   Home
+   //Home
  
  }
 }
@@ -13,7 +13,7 @@ export default {
 <template>
   <div>
    
-    <Home/>
+    <router-view></router-view>
   </div>
 
 </template>

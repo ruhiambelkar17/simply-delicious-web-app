@@ -1,12 +1,19 @@
 import { createRouter,createWebHistory } from "vue-router";
 
-export default route= createRouter({
+const router= createRouter({
     history:createWebHistory(),
     routes:[
         {
             path:"/",
             name:"Home",
-            component:()=>import("./views/Home.vue")
+            component:()=>import("../views/Home.vue")
+        },
+        {
+            path:"/recipes",
+            name:"Recipes",
+            component:()=>import("../views/Recipes.vue")
         }
     ]
 })
+
+export default router;
