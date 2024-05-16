@@ -9,8 +9,12 @@ export default {
   },
   data(){
     return {
-        isSignInClicked:false
+        isSignInClicked:false,
+        num:null
     }
+  },
+  created(){
+    
   }
 };
 </script>
@@ -22,6 +26,7 @@ export default {
     <div class="container my-3 ">
         <div class="d-flex justify-content-center"> 
             <h3 class="text-center ">Recipes</h3>
+            
         </div>
         <br />
         <div> 
@@ -47,6 +52,7 @@ export default {
 </template>
 
 <style scoped>
+
 .recipe-img {
     width: 100%;
     height: 300px;
