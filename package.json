@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "echart": "^0.1.3",
     "vue-router": "^4.3.2"
   }
 }

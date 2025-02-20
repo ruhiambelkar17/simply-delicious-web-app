@@ -1,11 +1,15 @@
 <script>
 import NavBar from "../components/NavBar.vue";
 import Carousel from "../components/Carousel.vue";
+import Chart from "../components/Chart.vue";
+
+
 
 export default {
   components: {
     NavBar,
-    Carousel
+    Carousel,
+    Chart
   },
   data(){
     return {
@@ -23,6 +27,7 @@ export default {
   <div>
     <NavBar />
    <Carousel></Carousel>
+   
     <div class="container my-3 ">
         <div class="d-flex justify-content-center"> 
             <h3 class="text-center ">Recipes</h3>
@@ -48,6 +53,7 @@ export default {
         </div>
        
     </div>
+   
   </div>
 </template>
 
