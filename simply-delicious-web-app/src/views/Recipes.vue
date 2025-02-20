@@ -7,9 +7,9 @@ export default {
   data(){
     return{
       cardsArr:[
-        {cardTitle:"Veg Recipes",cardText:"Exciting amd tasty recipes.",btnText:"Take a look",img:"../assets/images/Smoothie.jpeg"},
-        {cardTitle:"Non-Veg Recipes",cardText:"Exciting and mouthwatering recipes.",btnText:"Take a look",img:"../assets/images/Smoothie.jpeg"},
-        {cardTitle:"Veg Recipes",cardText:"Exciting and Delicious desserts.",btnText:"Take a look",img:"../assets/images/Smoothie.jpeg"}
+        {cardTitle:"Veg Recipes",cardText:"Exciting amd tasty recipes.",btnText:"Take a look",img:"@/assets/images/Smoothie.jpeg"},
+        {cardTitle:"Non-Veg Recipes",cardText:"Exciting and mouthwatering recipes.",btnText:"Take a look",img:"@/assets/images/Smoothie.jpeg"},
+        {cardTitle:"Veg Recipes",cardText:"Exciting and Delicious desserts.",btnText:"Take a look",img:"@/assets/images/Smoothie.jpeg"}
       ]
     }
   }
@@ -30,6 +30,7 @@ export default {
                   <h5 class="card-title">{{ item.cardTitle }}</h5>
                   <p class="card-text">
                     {{ item.cardText }} 
+                    <img :src="item.img" />
                   </p>
                   <a href="#" class="btn btn-primary">{{ item.btnText }}</a>
                 </div>
