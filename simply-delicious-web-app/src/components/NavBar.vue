@@ -25,6 +25,9 @@
             <li class="nav-item">
               <a class="nav-link"> Cusine</a>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/recipes-catalog"> Catalog</router-link>
+            </li>
           </ul>
         </div>
         <div class="d-inline-flex">

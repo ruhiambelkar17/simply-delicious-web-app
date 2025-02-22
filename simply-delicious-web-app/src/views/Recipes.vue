@@ -30,7 +30,7 @@ export default {
                   <h5 class="card-title">{{ item.cardTitle }}</h5>
                   <p class="card-text">
                     {{ item.cardText }} 
-                    <img :src="item.img" />
+                   
                   </p>
                   <a href="#" class="btn btn-primary">{{ item.btnText }}</a>
                 </div>
