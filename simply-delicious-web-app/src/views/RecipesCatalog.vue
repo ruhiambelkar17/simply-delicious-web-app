@@ -1,7 +1,8 @@
 <script>
   import DataTable from '../components/DataTable.vue';
+  import Pagination from '../components/Pagination.vue';
     export default {
-        components:{DataTable},
+        components:{DataTable,Pagination},
       data() {
         return {
           
@@ -16,6 +17,7 @@
         <hr />
         <div class="col-md-10 offset-1">
             <DataTable></DataTable>
+            <pagination></pagination>
         </div>
     </div>
     
